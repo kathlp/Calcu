@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kath's Calculator 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const shape = document.createElement("div");
+      shape.classList.add("background-shape");
+      shape.style.left = Math.random() * 100 + "vw";
+      shape.style.top = Math.random() * 100 + "vh";
+      shape.style.animationDuration = 5 + Math.random() * 10 + "s";
+      shape.style.backgroundColor = ["#ffcce0", "#ffb3d9", "#ff99cc", "#ff80bf"][Math.floor(Math.random() * 4)];
+      shape.style.borderRadius = Math.random() > 0.5 ? "50%" : "0 50% 50% 50%";
+      document.body.appendChild(shape);
+    }
+  </script>
+
+  <div class="calculator">
+    <h1>‧❀༉‧ Calculator ‧❀༉‧</h1>
+    <div class="face">
+      <div class="eye" id="eyeLeft"></div>
+      <div class="eye" id="eyeRight"></div>
+    </div>
+    <div class="mouth" id="mouth"></div>
+
+    <input type="text" id="display" disabled>
+
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()">⌫</button>
+      <button onclick="append('%')">%</button>
+      <button onclick="append('/')">÷</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+
+    <footer>˚❀༉‧ Made by Kath ˚❀༉‧</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
